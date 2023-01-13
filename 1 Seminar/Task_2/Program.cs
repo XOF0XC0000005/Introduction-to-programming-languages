@@ -8,4 +8,3 @@ if(firstNumber > secondNumber){
 } else {
     Console.WriteLine("max = " + secondNumber);
 }
-
