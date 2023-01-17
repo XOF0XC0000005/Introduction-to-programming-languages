@@ -1,4 +1,5 @@
-﻿Console.Write("Введите день недели цифрой: ");
+//Просили сделать через функции
+Console.Write("Введите день недели цифрой: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
 MondayCheck(num);
