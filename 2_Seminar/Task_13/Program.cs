@@ -1,16 +1,15 @@
-﻿Console.Write("Введите трёхзначное число: ");
+﻿Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
-if (num / 100 == 0)
+int workingNumber = num;
+if (workingNumber / 100 == 0)
 {
     Console.Write("Третьей цифры нет");
 }
-if (num >= 100 && num <= 999)
+if (workingNumber >= 100)
 {
-    Console.WriteLine(num + " -> " + num % 10);
-}
-if (num >= 1000)
-{
-    int workingNumber = num;
-    workingNumber /= 100;
+    while (workingNumber >= 999)
+    {
+        workingNumber = workingNumber / 10;
+    }
     Console.WriteLine(num + " -> " + workingNumber % 10);
 }
