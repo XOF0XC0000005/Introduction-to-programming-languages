@@ -4,7 +4,7 @@ int num = Convert.ToInt32(Console.ReadLine());
 int numDigits = num;
 int workingNumber = num;
 int numLength = 0;
-if(numDigits == 0) numLength = 1;
+if(num == 0) numLength = 1;
 while(numDigits != 0){
     numDigits /= 10;
     numLength++;
