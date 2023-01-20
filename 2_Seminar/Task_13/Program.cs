@@ -1,8 +1,14 @@
 ﻿//Усложнение от Алексея 2 вариант
 Console.Write("Введите число: ");
-string numString = Console.ReadLine();
-int numLength = numString.Length;
-int num = Convert.ToInt32(numString);
+int num = Convert.ToInt32(Console.ReadLine());
+int numDigits = num;
+int workingNumber = num;
+int numLength = 0;
+if(numDigits == 0) numLength = 1;
+while(numDigits != 0){
+    numDigits /= 10;
+    numLength++;
+}
 Console.Write("Какую цифру по счёту вам нужно вывести: ");
 int findNum = Convert.ToInt32(Console.ReadLine());
 if(findNum > numLength || findNum < 0){
@@ -11,9 +17,9 @@ if(findNum > numLength || findNum < 0){
 }
 int index = numLength - findNum;
 for(int i = 0; i < index; i++){
-    num /= 10;
+    workingNumber /= 10;
 }
-Console.WriteLine(numString + " -> " + num % 10);
+Console.WriteLine(num + " -> " + workingNumber % 10);
 
 //Усложнение от Алексея 1 вариант
 // Console.Write("Введите число: ");
