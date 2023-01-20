@@ -11,8 +11,8 @@ while(numDigits != 0){
 }
 Console.Write("Какую цифру по счёту вам нужно вывести: ");
 int findNum = Convert.ToInt32(Console.ReadLine());
-if(findNum > numLength || findNum < 0){
-    Console.WriteLine("Таких индексов нет в этом числе");
+if(findNum > numLength || findNum <= 0){
+    Console.WriteLine("Таких позиций нет в этом числе");
     return;
 }
 int index = numLength - findNum;
