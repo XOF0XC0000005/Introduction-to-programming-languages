@@ -3,7 +3,7 @@ int firstNum = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число B: ");
 int secondNum = Convert.ToInt32(Console.ReadLine());
 
-Console.Write(CustomPow(firstNum, secondNum));
+Console.Write($"{firstNum}, {secondNum} -> {CustomPow(firstNum, secondNum)}");
 
 int CustomPow(int num, int power)
 {
