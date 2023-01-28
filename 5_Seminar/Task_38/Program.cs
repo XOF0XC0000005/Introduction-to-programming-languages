@@ -21,12 +21,12 @@ void FillArray(int[] arr)
 int SubstractMaxMin(int[] arr)
 {
     int max = arr[0];
-    int min = arr[1];
+    int min = arr[0];
 
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 1; i < arr.Length; i++)
     {
-        if(max < arr[i]) max = arr[i];
-        if(min > arr[i]) min = arr[i];
+        if (max < arr[i]) max = arr[i];
+        if (min > arr[i]) min = arr[i];
     }
     return max - min;
 }
