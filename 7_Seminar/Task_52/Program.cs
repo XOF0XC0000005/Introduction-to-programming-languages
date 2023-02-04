@@ -18,9 +18,6 @@ Average(array);
 
 void Average(int[,] arr)
 {
-    // int i = 0; // 00 10 20// 01 11 21// 02 12 22// 03 13 23
-    // int j = 0;
-
     double averageInColumn = 0;
     string result = "\nСреднее арифметическое каждого столбца: ";
 
