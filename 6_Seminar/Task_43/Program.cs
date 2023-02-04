@@ -16,4 +16,5 @@ IntersectionPoint(b1, k1, b2, k2);
 void IntersectionPoint(double b1, double k1, double b2, double k2)
 {
     Console.Write($"b1 = {b1}, k1 = {k1}, b2 = {b2}, k2 = {k2} -> (x = {(b2 - b1) / (k1 - k2)}; y = {k1 * (b2 - b1) / (k1 - k2) + b1})");
+    Console.Write($"b1 = {b1}, k1 = {k1}, b2 = {b2}, k2 = {k2} -> (x = {(b2 - b1) / (k1 - k2)}; y = {k1 * (b2 - b1) / (k1 - k2) + b1})");
 }
