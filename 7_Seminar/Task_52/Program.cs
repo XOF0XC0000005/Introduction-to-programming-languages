@@ -27,7 +27,7 @@ void Average(int[,] arr)
         {
             averageInColumn += arr[i, j];
         }
-        result +=  Math.Round(averageInColumn/row, 2) + "; ";
+        result += Math.Round(averageInColumn / row, 2) + "; ";
         averageInColumn = 0;
     }
     Console.WriteLine(result);
