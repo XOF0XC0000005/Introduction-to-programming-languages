@@ -14,11 +14,13 @@ Console.Write("Введите колличество строк матрицы B
 int rowB = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите колличество столбцов матрицы B: ");
 int colB = Convert.ToInt32(Console.ReadLine());
+
 if (colA != rowB)
 {
     Console.Write("Произведение двух матриц не имеет смысла");
     return;
 }
+
 int[,] arrayA = new int[rowA, colA];
 int[,] arrayB = new int[rowB, colB];
 FillArray(arrayA);
@@ -34,7 +36,7 @@ void FindProductionAB(int[,] arrayA, int[,] arrayB)
     {
         for (int j = 0; j < arrayC.GetLength(1); j++)
         {
-            arrayC[i,j] = 0;
+            arrayC[i, j] = 0;
             for (int k = 0; k < arrayA.GetLength(1); k++)
             {
                 arrayC[i, j] += arrayA[i, k] * arrayB[k, j];
