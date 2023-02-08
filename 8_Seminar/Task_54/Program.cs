@@ -76,13 +76,6 @@ void FillSortedArray(List<int> list, int[,] arr)
         k++;
     }
 }
-void PrintList(List<int> list)
-{
-    for (int k = 0; k < list.Count; k++)
-    {
-        Console.Write(list[k] + " ");
-    }
-}
 List<int> SelectionSort(List<int> collection)
 {
     var highest = 0;
