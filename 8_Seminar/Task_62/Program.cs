@@ -18,26 +18,22 @@ int[,] array = new int[4, 4];
 int i = 0;
 int j = 0;
 int num = 1;
-Right();
+
 Down();
-Left();
-Up();
+PrintArray(array);
 Right();
-Down();
-Left();
 PrintArray(array);
 
 void Up()
 {
-    while (i > 0)
+    while (i > array.GetLength(0))
     {
-        if(array[i,j] != 0 ) break;
+        if (array[i, j] != 0) break;
         array[i, j] = num;
         i--;
         num++;
     }
-    i++;
-    j++;
+    Console.WriteLine($"i = {i} j = {j}");
 }
 void Left()
 {
@@ -50,30 +46,43 @@ void Left()
     }
     j++;
     i--;
+    Console.WriteLine($"i = {i} j = {j}");
 }
 void Right()
 {
+
     while (j < array.GetLength(1))
     {
-        if (array[i, j] != 0) break;
+
+        if (array[i, j] != 0)
+        {
+            break;
+        }
         array[i, j] = num;
         num++;
         j++;
     }
-    i++;
     j--;
+    Console.WriteLine($"i = {i} j = {j}");
 }
 void Down()
 {
+    if (i != 0 && j != 0)
+    {
+        i++;
+    }
     while (i < array.GetLength(0))
     {
-        if (array[i, j] != 0) break;
+        if (array[i, j] != 0)
+        {
+            break;
+        }
         array[i, j] = num;
         num++;
         i++;
     }
     i--;
-    j--;
+    Console.WriteLine($"i = {i} j = {j}");
 }
 void PrintArray(int[,] arr)
 {
@@ -85,4 +94,5 @@ void PrintArray(int[,] arr)
             Console.Write($"{arr[i, j],5}");
         }
     }
+    Console.WriteLine();
 }

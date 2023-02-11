@@ -45,7 +45,6 @@ void FindProductionAB(int[,] arrayA, int[,] arrayB)
     }
     PrintArray(arrayC);
 }
-
 void FillArray(int[,] arr)
 {
     Random random = new Random();
