@@ -10,6 +10,6 @@ Console.Write($"M = {numberFrom}; N = {numberTo} -> {SumElementsBetween(numberFr
 
 int SumElementsBetween(int from, int to)
 {
-    if(from == to) return from;
+    if (from == to) return from;
     return from + SumElementsBetween(from + 1, to);
 }
