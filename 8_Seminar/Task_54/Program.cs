@@ -63,17 +63,14 @@ List<int> Sort(int[,] arr)
 }
 void FillSortedArray(List<int> list, int[,] arr)
 {
-    int j = 0;
     int k = 0;
-    for (int i = 0; i < list.Count; i++)
+    for (int i = 0; i < arr.GetLength(0); i++)
     {
-        if (k == arr.GetLength(1))
+        for (int j = 0; j < arr.GetLength(1); j++)
         {
-            k = 0;
-            j++;
+            arr[i, j] = list[k];
+            k++;
         }
-        arr[j, k] = list[i];
-        k++;
     }
 }
 List<int> SelectionSort(List<int> collection)
