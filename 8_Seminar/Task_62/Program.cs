@@ -19,24 +19,38 @@ int i = 0;
 int j = 0;
 int num = 1;
 
+Right();
+PrintArray(array);
 Down();
 PrintArray(array);
+Left();
+PrintArray(array);
+Up();
+PrintArray(array);
 Right();
+PrintArray(array);
+Down();
+PrintArray(array);
+Left();
 PrintArray(array);
 
 void Up()
 {
-    while (i > array.GetLength(0))
+    i--;
+    while (i > 0)
     {
         if (array[i, j] != 0) break;
         array[i, j] = num;
         i--;
         num++;
     }
+    i++;
+    j++;
     Console.WriteLine($"i = {i} j = {j}");
 }
 void Left()
 {
+    j--;
     while (j >= 0)
     {
         if (array[i, j] != 0) break;
@@ -45,7 +59,6 @@ void Left()
         num++;
     }
     j++;
-    i--;
     Console.WriteLine($"i = {i} j = {j}");
 }
 void Right()
@@ -67,10 +80,7 @@ void Right()
 }
 void Down()
 {
-    if (i != 0 && j != 0)
-    {
-        i++;
-    }
+    i++;
     while (i < array.GetLength(0))
     {
         if (array[i, j] != 0)
