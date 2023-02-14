@@ -27,25 +27,19 @@ void PrintArrayWithIndexes(int[,,] arr)
 }
 void FillUniqueArray(List<int> list, int[,,] arr)
 {
-    int j = 0;
-    int k = 0;
-    int l = 0;
+        int i = 0;
 
-    for (int i = 0; i < list.Count; i++)
-    {
-        if (l == arr.GetLength(2))
+        for(int j = 0; j < arr.GetLength(0); j++)
         {
-            l = 0;
-            k++;
+            for(int k = 0; k < arr.GetLength(1); k++)
+            {
+                for (int l = 0; l < arr.GetLength(2); l++)
+                {
+                        arr[j, k, l] = list[i];
+                        i++;
+                }
+            }
         }
-        if (k == arr.GetLength(1))
-        {
-            k = 0;
-            j++;
-        }
-        arr[j, k, l] = list[i];
-        l++;
-    }
 }
 void PrintArray(int[,,] arr)
 {
